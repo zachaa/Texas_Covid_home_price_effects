@@ -5,14 +5,49 @@ import pandas as pd
 __all__ = ['locale_data', 'housing_data']
 
 # zip code ranges
-_AUSTIN_AREA_ZIP_CODES = [*range(78600, 78799)]
+# Greater Austin is ~: Bastrop, Caldwell, Hays, Travis, Williamson Counties
+_AUSTIN_AREA_ZIP_CODES = [*range(78600, 78605),
+                          78610, 78612, 78613, 78615, 78616, 78617, 78619,
+                          78620, 78621, 78622, 78626, 78628, 78633, 78634,
+                          78640, 78641, 78642, 78644, 78645, 78648, 78653, 78656, 78659, 
+                          78660, 78661, 78662, 78664, 78665, 78666, 78669, 78674, 78676, 78681,
+                          78623, 78632, 78650, 78652, 78654, 78655,  # partial West
+                          78663, 78670,  # edge outside
+                          *range(78700, 78800), # Austin City
+                          78953, 78957, # East Edge
+                          76527, 76511, 76530, 76537, 76573, 76574, 76578 # North
+                          ]
+# Dallas/Fort Worth Metroplex
+# Dallas: Collin, Dallas, Denton, Ellis, Hunt, Kaufman, Rockwall Counties
+# Fort Worth: Johnson, Parker, Tarrant, Wise Counties
+_DALLAS_AREA_ZIP_CODES = [*range(75000, 75020),
+                          75022, 75023, *range(75024, 75058), 75060, *range(75061, 75076), *range(75077, 75090), 75091, *range(75093, 75100),
+                          75101, 75104, 75114, 75115, 75116, 75119, 75125, 75126, 57132, 75134, 75135, 75137,
+                          75141, 75142, 75143, 75146, 75149, 75150, 75152, 75154, *range(75157, 75162), 75164, 75165, 75166, 75167,
+                          75172, 75173, 75180, 75181, 75182, 75189, 75390,
+                          *range(75200, 75261), *range(75263, 75300),  # Dallas
+                          75401, 75402, 75407, 75409, 75422, 75423, 75424, 75442, 75453, 75454, 75474,
+                          75428, 75496,  # NW Corner
+                          76201, 76203, 76205, *range(76207, 76211), 76226, 76227, 76247, 76249, 76258, 76259, 76262, 76266, # Denton city/county
+                          76064, 76065, 76041, 76623, 76651, 76670, 
+                          ]
+_FORT_WORTH_AREA_ZIP_CODES = [75262, 76050, 76084, # intersect South Dallas
+                              *range(76000, 76041), 76044, 76051, 76052, 76053, 76054, 76058, 76059,
+                              76060, 76061, 76063, 76066, 76071, 76073, 76078,
+                              76082, 76085, 76086, 76087, 76088, 76092, 76093,
+                              76225, 76234, 76244, 76248, 76267,
+                              *range(76100, 76200),  # Fort Worth City + 76155
+                              76426, 76431, 76487, # NW Corner
+                              75261  # DFW Airport
+                              ]
+
 _HOUSTON_AREA_ZIP_CODES = [*range(77000, 77299)]
-_DFW_AREA_ZIP_CODES = [*range(75000, 75399), *range(76000, 76299)]
+_DFW_AREA_ZIP_CODES = _DALLAS_AREA_ZIP_CODES + _FORT_WORTH_AREA_ZIP_CODES
 _SAN_ANTONIO_ZIP_CODE = [*range(78000, 78299)]
 
 _TEXAS_REGIONS = {"austin": _AUSTIN_AREA_ZIP_CODES,
-                  "dallas": _DFW_AREA_ZIP_CODES,
-                  "fort worth": _DFW_AREA_ZIP_CODES,
+                  "dallas": _DALLAS_AREA_ZIP_CODES,
+                  "fort worth": _FORT_WORTH_AREA_ZIP_CODES,
                   "dfw": _DFW_AREA_ZIP_CODES,
                   "houston": _HOUSTON_AREA_ZIP_CODES,
                   "san antonio": _SAN_ANTONIO_ZIP_CODE}
