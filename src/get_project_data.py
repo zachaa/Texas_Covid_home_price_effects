@@ -4,8 +4,9 @@ import pandas as pd
 
 __all__ = ['locale_data', 'housing_data']
 
-# zip code ranges
-# Greater Austin is ~: Bastrop, Caldwell, Hays, Travis, Williamson Counties
+# ZIP CODE RANGES
+# Greater Austin
+# ~ Bastrop, Caldwell, Hays, Travis, Williamson Counties
 _AUSTIN_AREA_ZIP_CODES = [*range(78600, 78605),
                           78610, 78612, 78613, 78615, 78616, 78617, 78619,
                           78620, 78621, 78622, 78626, 78628, 78633, 78634,
@@ -18,8 +19,8 @@ _AUSTIN_AREA_ZIP_CODES = [*range(78600, 78605),
                           76527, 76511, 76530, 76537, 76573, 76574, 76578 # North
                           ]
 # Dallas/Fort Worth Metroplex
-# Dallas: Collin, Dallas, Denton, Ellis, Hunt, Kaufman, Rockwall Counties
-# Fort Worth: Johnson, Parker, Tarrant, Wise Counties
+# Dallas ~: Collin, Dallas, Denton, Ellis, Hunt, Kaufman, Rockwall Counties
+# Fort Worth ~: Johnson, Parker, Tarrant, Wise Counties
 _DALLAS_AREA_ZIP_CODES = [*range(75000, 75020),
                           75022, 75023, *range(75024, 75058), 75060, *range(75061, 75076), *range(75077, 75090), 75091, *range(75093, 75100),
                           75101, 75104, 75114, 75115, 75116, 75119, 75125, 75126, 57132, 75134, 75135, 75137,
@@ -40,10 +41,35 @@ _FORT_WORTH_AREA_ZIP_CODES = [75262, 76050, 76084, # intersect South Dallas
                               76426, 76431, 76487, # NW Corner
                               75261  # DFW Airport
                               ]
-
-_HOUSTON_AREA_ZIP_CODES = [*range(77000, 77299)]
 _DFW_AREA_ZIP_CODES = _DALLAS_AREA_ZIP_CODES + _FORT_WORTH_AREA_ZIP_CODES
-_SAN_ANTONIO_ZIP_CODE = [*range(78000, 78299)]
+# Greater Houston
+# ~ Austin, Brazoria, Chambers, Fort Bend, Galveston, Harris, Liberty, Montgomery, Waller Counties
+_HOUSTON_AREA_ZIP_CODES = [*range(77000, 77100),  # Houston
+                           *range(77200, 77300),  # Houston PO Boxes
+                           77301, 77302, 77303, 77304, 77306, 77316, 77318, 77327,
+                           77328,
+                           77336, 77338, 77339, 77345, 77346, 77354, 77355, 77356, 77357, 77362, 77365, 77368, 77369, 77372,
+                           77373, 77375, 77377, 77378, 77379, 77380, 77381, 77382, 77384, 77385, 77386, 77388, 77389, 77396,
+                           77401, 77406, 77407, 77417, 77418, 77422, 77423,
+                           77426, 77429, 77430, 77431, 77433, 77441, 77444, 77445, 77446, 77447, 77449, 77450,
+                           77451, 77459, 77461, 77464, 77466, 77469, 77471, 77473, 77474, 77476, 77477, 77478, 77479,
+                           77480, 77481, 77484, 77485, 77486, 77489, 77493, 77494, 77498,
+                           77500,
+                           *range(77500, 77519), *range(77520, 77585), *range(77586, 77600),
+                           *range(77586, 77600),
+                           77617, 77623, 77629, 77650, 77661, 77665,  # East
+                           78931, 78933, 78944, 78950,  # West
+                           ]
+# Greater San Antonio
+# ~ Atascosa, Bandera, Bexar, Comal, Guadalupe, Kendall, Medina, Wilson Counties
+_SAN_ANTONIO_ZIP_CODE = [78002, 78003, 78004, 78006, 78008, 78009, 78010, 78011, 78012, 78013, 78015, 78016, 78023,
+                         78026, 78027, 78039, 78050, 78052, 78055, 78056, 78059, 78062, 78063, 78064, 78065, 78066, 78069,
+                         78070, 78073, 78074, 78101, 78108, 78109, 78112, 78113, 78114, 78121, 78123, 78124,
+                         78130, 78132, 78133, 78143, 78147, 78148, 78150, 78152, 78154, 78155, 78160, 78161, 78163,
+                         *range(78200, 78300), # San Antonio
+                         78606, 78623, 78638,  # NE
+                         78850, 78861, 78883, 78884, 78885, 78886, # West
+                         ]
 
 _TEXAS_REGIONS = {"austin": _AUSTIN_AREA_ZIP_CODES,
                   "dallas": _DALLAS_AREA_ZIP_CODES,
