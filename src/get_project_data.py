@@ -7,7 +7,7 @@ __all__ = ['locale_data', 'housing_data']
 # zip code ranges
 _AUSTIN_AREA_ZIP_CODES = [*range(78600, 78799)]
 _HOUSTON_AREA_ZIP_CODES = [*range(77000, 77299)]
-_DFW_AREA_ZIP_CODES = [*range(75000, 75499), (76000, 76299)]
+_DFW_AREA_ZIP_CODES = [*range(75000, 75399), *range(76000, 76299)]
 _SAN_ANTONIO_ZIP_CODE = [*range(78000, 78299)]
 
 _TEXAS_REGIONS = {"austin": _AUSTIN_AREA_ZIP_CODES,
