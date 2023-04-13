@@ -21,3 +21,14 @@ Department of Education
 
 Rough Breakdown of Task:
 
+1.-Importing Data into Python
+
+2.-Trimdown data 
+
+3.-Data Analysis – data frame Austin data cost average cost – per period statistical correlation, missing values, etc.
+
+4.-Show results in charts – line graph to show over time houses sold.
+ Pie Chart to show- parentage per metro, rural or suburbs.
+Geo spatial graph 
+
+5.-Power point presentation. for all of us to participate!
