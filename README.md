@@ -1,5 +1,4 @@
 # Project1
-Project 1
 Project Title: Project 1
 
 Team Members: Jake Lackey, Jessica Barker, Kali Schoenrock,
@@ -21,7 +20,6 @@ Realtor. com
 Department of Education
 
 
-
 Rough Breakdown of Task:
 
 1.-Importing Data into Python
@@ -35,3 +33,15 @@ Rough Breakdown of Task:
 Geo spatial graph 
 
 5.-Power point presentation. for all of us to participate!
+
+
+Austin Data 
+Average Value - Jessica
+Number of houses sold-Younes.
+
+Per state Data
+Average value -Kali 
+Number of houses sold- Celina.
+Rural – urban Changes - Zach
+Jake – Slides 
+
