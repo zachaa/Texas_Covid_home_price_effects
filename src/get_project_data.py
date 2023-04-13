@@ -2,8 +2,6 @@ from pathlib import Path
 import pandas as pd
 
 
-__all__ = ['locale_data', 'housing_data']
-
 # ZIP CODE RANGES
 # Greater Austin
 # ~ Bastrop, Caldwell, Hays, Travis, Williamson Counties
@@ -100,7 +98,7 @@ def locale_data() -> pd.DataFrame:
     
     sas = pd.read_sas(file_path, encoding="utf8")
     sas = sas.astype("Int32")
-    land_type = sas[sas["ZCTA5CE20"].between(75000, 79999)]
+    land_type = sas[sas["ZCTA5CE20"].between(75000, 79999)]  # only Texas Zip Codes
     land_type = land_type.rename(columns={"ZCTA5CE20": "zipcode"})
     return land_type
 
@@ -173,6 +171,7 @@ def housing_data(region: str = "tx") -> pd.DataFrame:
     housing_data = pd.read_csv(file_path, dtype=as_type)
     housing_data.rename(columns={"month_date_yyyymm": "date",
                                  "postal_code": "zipcode"}, inplace=True)
+    # convert YYYYmm string to datetime (first day of the month)
     housing_data["date"] = pd.to_datetime(housing_data["date"], format="%Y%m")
     if region in ("tx", "texas"):
         return housing_data
@@ -180,3 +179,19 @@ def housing_data(region: str = "tx") -> pd.DataFrame:
     # get only data that is in the correct zipcodes
     region_housing_df = housing_data[housing_data["zipcode"].isin(_TEXAS_REGIONS[region_choice])]
     return region_housing_df
+
+
+def create_texas_only_housing_data(path_to_relator_data: str):
+    """
+    Create the Texas only CSV file for housing data and saves it to data/
+
+    :param path_to_relator_data: path to the RDC_Inventory_Core_Metrics_Zip_History.csv file
+    """
+    print("Loading full csv file...")
+    housing_csv_df_save = pd.read_csv(path_to_relator_data)
+    housing_csv_df_save.drop(housing_csv_df_save.index[-1], inplace=True)
+    housing_csv_df_save["zip_ints"] = housing_csv_df_save["postal_code"].astype('int32')
+    texas_only = housing_csv_df_save[housing_csv_df_save["zip_ints"].between(75000, 79999)]  # only Texas Zip Codes
+    texas_only = texas_only.drop("zip_ints", axis=1)  # not originally there so remove it
+    texas_only.to_csv("data/texas_zipcode_only_housing_data_monthly.csv", index=False)
+    print(f"File created at: {Path('data/texas_zipcode_only_housing_data_monthly.csv').absolute()}")
