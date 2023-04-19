@@ -16,8 +16,9 @@ Covid's effect in housing makret trend in the greater Austin and entire Texas re
 
 ## Research Question and Observations to Make: 
 1. What happened in the housing market during the Covid time period in the Austin and Greater Texas areas?
-2. Identify trends that help explain the state's housing market. 
-3. Determine the influence of locality in home price averages and units sold. 
+2. Identify trends that help explain the state's housing market pre and post Covid. 
+3. Determine the influence of Covid in home price averages and units sold. 
+4. Use locality as a reference point in the housing marketing during this time. 
 
 
 ## Datasets to Be Used:
