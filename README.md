@@ -1,10 +1,10 @@
-# Project 1
+# Covid & Home Prices
+![40682306-9377177-The_entire_garage_door_has_been_painted_with_an_enormous_Texas_s-a-35_1616172968228](https://user-images.githubusercontent.com/120591725/233154686-a319e98e-497d-439c-b831-f91cb09c7e57.jpg)
 
-## Project Title:
-Project 1
+A Detailed analysis of covid’s ripple effect on home prices in the Texas market.
 
 ## Team Members:
-- Jake Lackey
+- Jacob Lackey
 - Jessica Barker
 - Kali Schoenrock
 - Younes Smyej
@@ -12,12 +12,13 @@ Project 1
 - Celina Espinosa
 
 ## Project Description/Outline: 
-Covid effect in the housing trends in the central Texas area and across the whole state.
+Covid's effect in housing makret trend in the greater Austin and entire Texas region.
 
-## Research Questions to Answer: 
-1. What happened with housing sold over time (whatever available data is there) per region (Austin).
-2. What happened with housing average price over time (whatever available data is there) per region (Austin).
-3. Trend to different areas from metro areas or outside region to rural areas.
+## Research Question and Observations to Make: 
+1. What happened in the housing market during the Covid time period in the Austin and Greater Texas areas?
+2. Identify trends that help explain the state's housing market. 
+3. Determine the influence of locality in home price averages and units sold. 
+
 
 ## Datasets to Be Used:
 - Realtor.com [Monthly Inventory by Zip code Historical Data](https://www.realtor.com/research/data/)
@@ -47,5 +48,7 @@ Covid effect in the housing trends in the central Texas area and across the whol
 - Number of houses sold - Celina
 - Rural – urban Changes - Zach
 
-Jake – Slides 
+### Presntation Information
+- Powerpoint slides - Jacob
+- Read Me - Jacob
 
