@@ -128,5 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-
+.DS_Store
 DO_NOT_UPLOAD.ipynb
