@@ -195,3 +195,6 @@ def create_texas_only_housing_data(path_to_relator_data: str):
     texas_only = texas_only.drop("zip_ints", axis=1)  # not originally there so remove it
     texas_only.to_csv("data/texas_zipcode_only_housing_data_monthly.csv", index=False)
     print(f"File created at: {Path('data/texas_zipcode_only_housing_data_monthly.csv').absolute()}")
+
+
+
