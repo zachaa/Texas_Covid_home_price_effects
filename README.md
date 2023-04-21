@@ -12,7 +12,7 @@ A Detailed analysis of covid’s ripple effect on home prices in the Texas marke
 - Celina Espinosa
 
 ## Project Description/Outline: 
-Covid's effect in the housing market trend for the greater Austin and entire Texas region.
+Covid's effect in housing makret trend in the greater Austin and entire Texas region.
 
 ## Research Question and Observations to Make: 
 1. What happened in the housing market during the Covid time period in the Austin and Greater Texas areas?
@@ -41,15 +41,15 @@ Covid's effect in the housing market trend for the greater Austin and entire Tex
 
 ### Assignments
 #### Austin Data 
-- Average Value - Jessica
-- Number of houses sold - Younes
+- [Average Value - Jessica](housingtrend.ipynb)
+- [Number of houses sold - Younes](Number&#32;of&#32;houses&#32;sold.ipynb)
 
 #### Full State Data
-- Average value - Kali 
-- Number of houses sold - Celina
-- Rural – urban Changes - Zach
+- [Average value - Kali ](TexasStateHousingPricingData.ipynb)
+- [Number of houses sold - Celina](texas_state_count_%20data.ipynb)
+- [Rural – urban Changes - Zach](housing_by_locale.ipynb)
 
-### Presntation Information
-- Powerpoint slides - Jacob
+### Presentation Information
+- [Powerpoint slides - Jacob](Covid&#32;&&#32;Texas&#32;Housing&#32;Presentation.pdf)
 - Read Me - Jacob
 
